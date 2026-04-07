@@ -1,8 +1,10 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { Logger } from "@packages/logger";
+import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute('/')({ component: App })
+export const Route = createFileRoute("/")({ component: App });
 
 function App() {
+  Logger.info("Frontend application is starting...");
   return (
     <main className="page-wrap px-4 pb-8 pt-14">
       <section className="island-shell rise-in relative overflow-hidden rounded-[2rem] px-6 py-10 sm:px-10 sm:py-14">
@@ -37,20 +39,20 @@ function App() {
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
           [
-            'Type-Safe Routing',
-            'Routes and links stay in sync across every page.',
+            "Type-Safe Routing",
+            "Routes and links stay in sync across every page.",
           ],
           [
-            'Server Functions',
-            'Call server code from your UI without creating API boilerplate.',
+            "Server Functions",
+            "Call server code from your UI without creating API boilerplate.",
           ],
           [
-            'Streaming by Default',
-            'Ship progressively rendered responses for faster experiences.',
+            "Streaming by Default",
+            "Ship progressively rendered responses for faster experiences.",
           ],
           [
-            'Tailwind Native',
-            'Design quickly with utility-first styling and reusable tokens.',
+            "Tailwind Native",
+            "Design quickly with utility-first styling and reusable tokens.",
           ],
         ].map(([title, desc], index) => (
           <article
@@ -73,15 +75,15 @@ function App() {
             Edit <code>src/routes/index.tsx</code> to customize the home page.
           </li>
           <li>
-            Update <code>src/components/Header.tsx</code> and{' '}
+            Update <code>src/components/Header.tsx</code> and{" "}
             <code>src/components/Footer.tsx</code> for brand links.
           </li>
           <li>
-            Add routes in <code>src/routes</code> and tweak visual tokens in{' '}
+            Add routes in <code>src/routes</code> and tweak visual tokens in{" "}
             <code>src/styles.css</code>.
           </li>
         </ul>
       </section>
     </main>
-  )
+  );
 }
